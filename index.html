@@ -3,42 +3,47 @@
 <head>
   <meta charset="UTF-8">
   <title>Qunix</title>
-  <style>
-    body {
+   <style>
+    html, body {
       margin: 0;
-      height: 100vh;
-      background: linear-gradient(to bottom, #2e2e2e, #000000); /* Gray to black */
-      color: #f0f0f0;
+      padding: 0;
+      height: 100%;
+      background: linear-gradient(to bottom, #2e2e2e, #000000);
       font-family: Arial, sans-serif;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
     }
-     button {
+
+    .center {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+    }
+
+    button {
       padding: 1em 2em;
       font-size: 1.2em;
-      background-color: linear-gradient(to bottom, #2e2e2e, #000000);;
-      color: white;
-      border: none;
-      border-radius: 8px;
+      background-color: #1a1a1a;
+      color: #f0f0f0;
+      border: 2px solid #444;
+      border-radius: 12px;
       cursor: pointer;
-      transition: background 0.3s ease;
+      transition: background 0.3s ease, transform 0.1s ease;
     }
-    h1 {
-      font-size: 3em;
+
+    button:hover {
+      background-color: #333;
     }
-    p {
-      font-size: 1.2em;
-      color: #cccccc;
+
+    button:active {
+      transform: scale(0.98);
     }
   </style>
 </head>
 <body>
-  <audio id="bgmusic" src="https://qunix.space/Schnuffel%20-%20I%20love%20you%20so%20(Best%20part)%20(Slowed).mp3" loop></audio>
-<button onclick="document.getElementById('bgmusic').play()">
-  ▶ Play Music
-</button>
+ <audio id="bgmusic" src="https://qunix.space/Schnuffel%20-%20I%20love%20you%20so%20(Best%20part)%20(Slowed).mp3" loop></audio>
+  <div class="center">
+    <button onclick="document.getElementById('bgmusic').play()">▶ Play Music</button>
+  </div>
 
   <div>
     <h1>Qunix</h1>
