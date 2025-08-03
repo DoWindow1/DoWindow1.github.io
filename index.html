@@ -30,31 +30,18 @@
     button:active {
       transform: scale(0.98);
     }
-    #gif {
-      margin-top: 20px;
-      display: none;
-      max-width: 300px;
-      border-radius: 12px;
-      box-shadow: 0 0 10px #000;
-    }
   </style>
 </head>
 <body>
    <audio id="bgmusic" src="https://qunix.space/Schnuffel%20-%20I%20love%20you%20so%20(Best%20part)%20(Slowed).mp3" loop></audio>
   <button id="playBtn">▶ Play Music</button>
-  <img id="gif" src="https://tenor.com/view/funny-animal-dancing-cat-cat-kitty-cute-gif-1879301708244436198" alt="gf" />
-
   <script>
     const btn = document.getElementById('playBtn');
     const audio = document.getElementById('bgmusic');
-    const gif = document.getElementById('gif');
     btn.addEventListener('click', () => {
       audio.play();
-      gif.style.display = 'block';
-      btn.disabled = true;
       btn.textContent = '🎵 Playing...';
     });
   </script>
-
 </body>
 </html>
