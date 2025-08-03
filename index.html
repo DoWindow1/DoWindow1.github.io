@@ -29,10 +29,6 @@
     }
     button:active {
       transform: scale(0.98);
-      display: none;
-    }
-    #playBtn {
-    display: none;
     }
   </style>
 </head>
@@ -46,6 +42,7 @@
     const audio = document.getElementById('bgmusic');
     btn.addEventListener('click', () => {
       audio.play();
+      btn.style.display = 'none';
       });
   </script>
 </body>
